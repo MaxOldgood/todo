@@ -14,7 +14,7 @@ body {
     opacity: 0.8;
     margin: auto;
     margin-top: 50px;
-    border-radius: 50px;
+    border-radius: 30px;
 }
 
 .task-block {
@@ -93,6 +93,7 @@ body {
 
     margin-left: 12px;
     margin-top: 12px;
+    color-scheme: red;
 }
 
 .task-name {  
@@ -110,6 +111,11 @@ body {
 
 }
 
-.task ~ .complete-task-button:checked {
-    background-color: #F4F4F4;
+.task:has(.complete-task-button:checked) {
+    background-color: #51cc99;
+    text-decoration: line-through;
+}
+
+.complete-task-button:checked {
+    accent-color: rgb(3, 90, 78);
 }
